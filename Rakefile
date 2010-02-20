@@ -11,6 +11,8 @@ begin
     gemspec.homepage = "http://github.com/xeqi/HoustonLibrarySearch"
     gemspec.authors = ["Nelson Morris"]
     gemspec.files =  FileList["[A-Z]*", "{lib,test}/**/*"]
+    gemspec.add_dependency 'curb'
+    gemspec.add_dependency 'nokogiri'
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
