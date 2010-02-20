@@ -1,5 +1,9 @@
 require 'rubygems'
 require 'rake'
+require 'rake/clean'
+
+CLOBBER.include("pkg")
+CLOBBER.include("*.gemspec")
 
 begin
   require 'jeweler'
