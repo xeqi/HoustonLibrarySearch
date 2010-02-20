@@ -1,13 +1,14 @@
-require 'curb'
-require 'nokogiri'
-
 class HPL
-  def self.listings(isbn)
-    c = Curl::Easy.perform("http://catalog.houstonlibrary.org/search~S0/?searchtype=i&searcharg=#{isbn}")
-    xml = Nokogiri::XML.parse(c.body_str)
-    xml.css('.bibItemsEntry').collect do |x|
+
+  def self.url(isbn)
+    "http://catalog.houstonlibrary.org/search~S0/?searchtype=i&searcharg=#{isbn}"
+  end
+
+  def self.parse(html)
+    xml = Nokogiri::XML.parse(html)
+    xml.css('.bibItemsEntry').collect do |table|
       due = ''
-      row = x.css('td')
+      row = table.css('td')
       status = row[3].text.strip
       if status =~ /DUE/
         due = status[4, 8]
@@ -16,7 +17,9 @@ class HPL
       Listing.new(row[0].text.strip, row[2].text.strip, status.capitalize, due)
     end
   end
+
   def self.name
     "Houston Public Library"
   end
+
 end

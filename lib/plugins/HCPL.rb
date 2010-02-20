@@ -1,13 +1,15 @@
-require 'curb'
-require 'nokogiri'
 
 class HCPL
-  def self.listings(isbn)
-    c = Curl::Easy.perform("http://catalog.hcpl.net/ipac20/ipac.jsp?index=ISBNEXH&term=#{isbn}")
-    xml = Nokogiri::XML.parse(c.body_str)
+  def self.url(isbn)
+    "http://catalog.hcpl.net/ipac20/ipac.jsp?index=ISBNEXH&term=#{isbn}"
+  end
+
+  def self.parse(html)
+    xml = Nokogiri::XML.parse(html)
     results = xml.css(".tableBackground .tableBackground .tableBackground .tableBackground .tableBackground .tableBackground").collect do |table|
       trs = table.css("tr")
-      # mask multiple books as no results
+      # TODO handle muliple book returns
+      # Currently mask multiple books as no results
       # see isbn 0887307280
       if(trs[0].css("td")[0].css("a").text =~ /Location/)
         trs[1, trs.length-1].collect do |tr|

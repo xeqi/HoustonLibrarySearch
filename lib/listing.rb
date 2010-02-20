@@ -1,6 +1,5 @@
 
 class Listing
-
   attr_reader :location, :call_number, :status, :due_date
 
   def initialize(location, call_number, status, due_date) 
