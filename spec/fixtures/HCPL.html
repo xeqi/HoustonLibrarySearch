@@ -1,0 +1,971 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <META HTTP-EQUIV="Expires" CONTENT="0"><title>Harris County Public Library Online Catalog</title><link title="bannerstyles" href="/hipres/css/ipac.css" type="text/css" rel="stylesheet"><SCRIPT LANGUAGE="JavaScript">
+<!--
+	function startTimer()
+	{
+		curUrl = window.location.href;
+		if (curUrl.indexOf("startover=true", 0) < 0)
+		{    
+		  var time= new Date();
+	        hours= time.getHours();
+	        mins= time.getMinutes();
+	        secs= time.getSeconds();
+	        closeTime=hours*3600+mins*60+secs;
+	        closeTime+=300;
+	        Timer();
+		}
+	}
+	function Timer()
+	{
+	        var time= new Date();
+	        hours= time.getHours();
+	        mins= time.getMinutes();
+	        secs= time.getSeconds();
+	        curTime=hours*3600+mins*60+secs;
+	        if(curTime>=closeTime)
+		{
+		        location = "http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&lang=eng&logout=true&startover=true";
+		}
+		else
+		{
+			window.setTimeout("Timer()",1000);
+		}
+	}
+//-->
+</SCRIPT><script language="JavaScript">
+ <!--
+	var checked = false;
+	function checkGoButton()
+	{
+		if (checked)
+		{
+			return false;
+		}
+		else
+		{
+			checked = true;
+			return true;
+		}
+	}
+    function authenticate()
+    {
+        document.security.menu.value='account';
+        window.location = window.location + "#focus";
+    }
+    function newUser()
+    {
+        document.security.newuser_prompt.value='true';
+        document.security.menu.value='account';
+        window.location = window.location + "#focus";
+    }
+    function newUserInfo()
+    {
+        document.newuser.newuser_info.value='true';
+        document.newuser.menu.value='account';
+        window.location = window.location + "#focus";
+    }
+//-->
+</script><script language="JavaScript"><!--
+	function setfocus()
+	{
+	 if (document.search)
+	 {
+		 if (document.search.term)
+	 	{
+			if (document.search.term[0])
+			{
+				document.search.term[0].focus();
+				document.search.term[0].select();
+			}
+			else
+			{
+				document.search.term.focus();
+				document.search.term.select();
+			}
+		 }
+	}
+	if (document.security)
+	{
+		 if (document.security.sec1)
+		 {
+			document.security.sec1.focus();
+		 }
+	 }
+	}
+	// --></script></head><body bgcolor="#FFFFFF" onload="startTimer();setfocus();" background="" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"><input type="hidden" name="session" value="1C667UJ250162.112733"><a xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tinyAnchor" href="#content" title="Jump to Content" alt="Jump to Content"></a><table xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr valign="bottom"><td valign="bottom" align="middle" width="10%" rowspan="2"><a class="globalAnchor" href="http://www.hcpl.net"><img src="/hipres/images/hcpllogo.gif" border="0" alt="Harris County Public Library"></a><br><a class="tinyAnchor" href="http://www.hcpl.net">Harris County Public Library</a><br><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td><td align="right" width="100%" colspan="2"><table cellspacing="0" cellpadding="3" valign="top" border="0"><tbody><tr><td class="globalLinks" valign="middle" nowrap="true" align="right"><table cellspacing="2" cellpadding="0" valign="top" border="0"><tr><td><a class="globalAnchor" title="" href="http://catalog.hcpl.net/ipac20/ipac.jsp?profile=webcat-ada&amp;lang=eng"><img src="/hipres/images/flag.gif" width="25" height="20" border="0" alt="Switch to library" align="middle">HCPL ADA catalog</a><a class="globalAnchor" title="" href="http://catalog.hcpl.net/ipac20/ipac.jsp?profile=espanol&amp;lang=esp"><img src="/hipres/images/flag.gif" width="25" height="20" border="0" alt="Switch to library" align="middle">HCPL Spanish catalog</a></td><td><a class="globalAnchor" title="Login" href="javascript:loginIntoOrOutOfAccount('http%3A%2F%2Fcatalog.hcpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D1C667UJ250162.112733%26profile%3Dwebcat%26auth%3Dtrue%26submenu%3Dsubtab14%26date%3D1266732250491','')"><img src="/hipres/images/login.gif" width="25" height="20" border="0" alt="Click here to login" align="middle">Login</a></td><td><a class="globalAnchor" title="Help" href="javascript:popUpHelp('/hipres/help/eng/horizon/viewiteminfo.htm');"><img src="/hipres/images/help.gif" width="25" height="20" border="0" alt="Help" align="middle">Help</a></td></tr></table></td></tr></tbody></table></td></tr><tr><td align="center" valign="bottom" width="99%"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="50%" valign="bottom"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#008080" cellpadding="0" cellspacing="0" border="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/tab_lt.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/tab_rt.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_lm.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td nowrap="true"><table cellpadding="0" cellspacing="0" width="100%" border="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabActive" title="Search Library Catalog" alt="Search Library Catalog">Search</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/tab_rm.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td><img height="2" src="/hipres/images/tab_lb.gif" width="4"></td><td><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td><img height="2" src="/hipres/images/tab_rb.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="View my account information" alt="View my account information" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=account&amp;ts=1266732250491">My Account</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="Aquabrowser" alt="Aquabrowser" href="http://newcatalog.hcpl.net/HCPL/">Power Search</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="HCPL Databases" alt="HCPL Databases" href="http://www.hcpl.net/ref/dbsubs.htm">HCPL Databases</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td valign="bottom"><table bgcolor="#BDC5C9" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td width="4"><img height="4" src="/hipres/images/NW0-blue.gif" width="4"></td><td background="/hipres/images/bg-N0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="8"></td><td width="4"><img height="4" src="/hipres/images/NE0-blue.gif" width="4"></td></tr><tr><td background="/hipres/images/bg-W0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td><td align="middle"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td><td nowrap="true" class="tabText" align="middle" height="22">&nbsp;<a class="TabInactive" title="HCPL Location Codes" alt="HCPL Location Codes" href="http://www.hcpl.net/content/location-codes">HCPL Locations</a>&nbsp;</td><td><img height="8" src="/hipres/images/spacer.gif" width="2"></td></tr></tbody></table></td><td background="/hipres/images/bg-E0-blue.gif"><img height="4" src="/hipres/images/spacer.gif" width="4"></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="8"></td><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif" width="4"></td></tr></tbody></table></td><td width="50%" valign="bottom"><table width="100%" border="0" cellpadding="0" cellspacing="0" background="/hipres/images/tab_mt.gif"><tbody><tr><td><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td></tr></tbody></table></td><td width="1%" valign="bottom"><table width="180" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td valign="top" align="right" nowrap="true" width="100%"><a class="normalBlackFont1">&nbsp;&nbsp;&nbsp;</a></td></tr><tr><td background="/hipres/images/tab_mt.gif"><img height="2" src="/hipres/images/spacer.gif"></td></tr></tbody></table></td></tr></tbody></table><table xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" cellspacing="0" cellpadding="3" width="100%" bgcolor="#008080" border="0"><tbody><tr valign="top" align="middle"><td width="100%"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Basic Search" alt="Basic Search" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=search&amp;submenu=subtab13&amp;ts=1266732250491">Basic Search</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarCurrent" title="Advanced search" alt="Advanced search" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=search&amp;submenu=subtab14&amp;ts=1266732250491">Advanced Search</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Browse Search" alt="Browse Search" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=search&amp;submenu=subtab15&amp;ts=1266732250491">Browse Search</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Bestsellers Lists" alt="Bestsellers Lists" href="http://www.hcpl.net/read/books">Bestsellers Lists</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td><td><img height="16" src="/hipres/images/bck_tan.gif" width="1"></td><td><img height="30" src="/hipres/images/spacer.gif" width="8"></td><td valign="center" align="middle"><a class="navBarAnchor" title="Your search history" alt="Your search history" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=search&amp;submenu=history&amp;ts=1266732250491">History</a></td><td><img height="8" src="/hipres/images/spacer.gif" width="8"></td></tr></tbody></table></td></tr></tbody></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><form name="search" action="http://catalog.hcpl.net/ipac20/ipac.jsp" method="GET"><td bgcolor="#EEEECC" width="100%" align="left" colspan="3"><input type="hidden" name="session" value="1C667UJ250162.112733"><input type="hidden" name="menu" value="search"><input type="hidden" name="aspect" value="subtab14"><input type="hidden" name="npp" value="60" size="2"><input type="hidden" name="ipp" value="325"><input type="hidden" name="spp" value="60"><input type="hidden" name="profile" value="webcat"><input type="hidden" name="ri" value="1"><input type="hidden" name="source" value="~!library"><table class="tableBackgroundHighlight" cellpadding="3" cellspacing="0" border="0" width="100%"><tr><td bgcolor="#EEEECC"><a class="boldBlackFont2">Search:&nbsp;</a></td><td bgcolor="#EEEECC"><select class="comboBox" name="index"><option value=".GH">Keywords Anywhere </option><option value=".TH">Title Keywords</option><option value=".AH">Author Keywords</option><option value=".SH">Subject Keywords </option><option value=".SERH">Series Keywords</option><option selected="true" value="ISBNEXH">ISBN Number</option></select></td><td bgcolor="#EEEECC">&nbsp;</td><td bgcolor="#EEEECC"><input class="textInputBox" type="text" size="25" name="term" maxsize="100" value="1430219483"></td><td bgcolor="#EEEECC">&nbsp;<input class="normalBlackFont1" type="image" src="/hipres/images/b-go-red.gif" border="0" alt="Go"><input type="hidden" name="aspect" value="subtab14"></td><td bgcolor="#EEEECC">&nbsp;</td><td bgcolor="#EEEECC" valign="bottom" nowrap="true"><a class="tinyAnchor" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=search&amp;aspect=history&amp;histedit=last">Refine Search</a></td><td bgcolor="#EEEECC" width="40%">&nbsp;</td><td bgcolor="#EEEECC" width="60%">&nbsp;</td></tr><tr><td bgcolor="#EEEECC" align="left" valign="top" nowrap="true" colspan="15"><a class="normalBlackFont0">&gt;
+                            You're searching: <b>Harris County Public Library</b></a></td></tr></table></td></form></tr></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td width="100%" colspan="3">&nbsp;</td></tr><tr valign="center"></tr></table><table xmlns:sstrings="http://www.dynix.com/2001/sstrings" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" class="tableBackground" width="100%" cellpadding="0" cellspacing="0" border="0"><tr></tr></table><script xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" LANGUAGE="JavaScript">
+myarr = null;
+count = 0;
+setReturnFlag=0;
+
+function buildReturnPageNewList(thisurl,returnurl)
+{
+
+       if(document.buildLink.returnURL )
+        {
+          if(returnurl != '')
+		  {
+            document.buildLink.returnURL.value = unescape(returnurl);
+			}
+
+        }
+       // window.location = url;
+
+        if(navigator.appName == "Netscape")
+        {
+
+	       document.buildLink.action=unescape(thisurl);
+       }
+        else
+        {
+            document.buildLink.action=thisurl;
+        }
+
+       document.buildLink.submit();
+
+
+
+}
+
+
+function  ReturnSearchPage(url)
+    {
+
+         if(document.SearchResult)
+         {
+
+                   document.SearchResult.action = unescape(url);
+                   document.SearchResult.submit();
+
+         }
+         else if(document.buildLink)
+         {
+                document.buildLink.action = unescape(url);
+                document.buildLink.submit();
+
+         }
+         else
+            window.location = unescape(url);
+    }
+
+
+function buildNewList(url,retURL,summary)
+{
+    i = 0;
+
+
+
+
+       if(myarr != null)
+        {
+                while(myarr[i] != null)
+                 {
+                        var thisString = new String(myarr[i]);
+                        if(thisString.indexOf("bkey") != -1)
+                         {
+                            url +='&addkeys=' + myarr[i];
+
+                          }
+                        i++;
+                 }
+
+
+        }
+
+       if(document.buildLink.returnURL )
+        {
+
+
+         if(setReturnFlag == 1)
+          {
+                  if(retURL)
+                   {
+                     if(summary == 'false')
+                            document.buildLink.returnURL.value = unescape(retURL);
+                      else
+                          document.buildLink.returnURL.value = unescape(document.location.toString());
+                   }
+                  else
+                       document.buildLink.returnURL.value = unescape(document.location.toString());
+           }
+        }
+
+       // window.location = url;
+
+       document.buildLink.action=unescape(url);
+
+
+       document.buildLink.submit();
+
+
+
+}
+
+function buildMyList(URL,retURL)
+{
+  i = 0;
+
+
+
+
+if(document.buildLink)
+{
+
+
+
+        if(myarr != null)
+        {
+
+                for(i = 0; i <myarr.length; i++)
+                {
+
+
+                    if(myarr[i] != null)
+                    {
+                         URL+='&addkeys=' + myarr[i];
+
+
+                    }
+                }
+
+
+
+        }
+
+
+
+       if(document.buildLink.returnURL )
+        {
+
+             if(setReturnFlag == 1 || retURL != '')
+             {
+
+                    if(retURL != '')
+                            document.buildLink.returnURL.value = retURL;
+                    else
+                      document.buildLink.returnURL.value = document.location.toString();
+
+                        index = document.buildLink.returnURL.value.indexOf('#focus');
+                        if(index >-1)
+                         {
+                            document.buildLink.returnURL.value = document.buildLink.returnURL.value.substring(0,index);
+                         }
+
+
+
+                        if(myarr != null)
+                        {
+
+                             for(i = 0; i <myarr.length; i++)
+                            {
+                               index = document.buildLink.returnURL.value.indexOf('?');
+                               if(index == -1)
+                               {
+                                   document.buildLink.returnURL.value +='?';
+                               }
+                               else
+                               {
+                                  document.buildLink.returnURL.value+='&';
+                               }
+                               if(myarr[i] != null)
+                                    document.buildLink.returnURL.value+='addkeys=' + myarr[i];
+
+                            }
+
+                        }
+
+
+
+                  document.buildLink.returnURL.value = unescape(document.buildLink.returnURL.value);
+
+             }
+
+        }
+
+
+
+
+        document.buildLink.action=unescape(URL);
+
+
+
+        document.buildLink.submit();
+}
+else
+{
+
+    window.location = unescape(URL);
+}
+
+
+}
+
+function   loginIntoOrOutOfAccount(URL,retURL)
+    {
+         i = 0;
+
+
+
+
+
+    setReturnFlag = 1;
+
+
+        if(document.buildLink)
+        {
+                document.buildLink.action=unescape(URL);
+
+
+                if(myarr != null)
+                {
+                        while(myarr[i] != null)
+                         {
+                                 document.buildLink.action+='&addkeys=' + myarr[i];
+                                i++;
+                         }
+
+
+                }
+
+
+               if(document.buildLink.returnURL || setReturnFlag == 1 )
+                {
+
+                     if(retURL != '')
+                     {
+                          document.buildLink.returnURL.value = retURL;
+                     }
+                     else
+                     {
+                           document.buildLink.returnURL.value = document.location.toString();
+                     }
+                     if(myarr != null)
+                     {
+                              i = 0;
+                              while(myarr[i] != null)
+                              {
+                                      document.buildLink.returnURL.value+='&addkeys=' + myarr[i];
+                                      i++;
+                               }
+
+                      }
+
+
+                    document.buildLink.returnURL.value = unescape(document.buildLink.returnURL.value);
+
+
+
+                }
+
+
+
+                document.buildLink.submit();
+        }
+        else
+        {
+
+            if(navigator.appName == "Netscape")
+            {
+                window.location = unescape(URL);
+            }
+            else
+            {
+                window.location = URL;
+            }
+
+        }
+
+
+ }
+
+function popUpHelp(URL)
+{
+	day = new Date();
+	id = day.getTime();
+	eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=1,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=350,height=650');");
+}
+function changeBookbagText(text)
+{
+	if (document.getElementById)
+	{
+ 		document.getElementById('bookbag').innerHTML=text;
+	}
+	else if (document.layers)
+	{
+  		document.anchors["viewlist"].text=text;
+	}
+	else
+	{
+
+		bookbag.innerHTML=text;
+	}
+}
+</script><!--
+****************************************************
+Security
+****************************************************
+--><a xmlns:netlib="/com.dynix.util.ulURLAPI" xmlns:stringex="/com.dynix.util.StringEx" xmlns:termhighlight="/com.dynix.util.TermHighlight" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" xmlns:URLDecoder="/java.net.URLDecoder" name="content"></a><table xmlns:netlib="/com.dynix.util.ulURLAPI" xmlns:stringex="/com.dynix.util.StringEx" xmlns:termhighlight="/com.dynix.util.TermHighlight" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" xmlns:URLDecoder="/java.net.URLDecoder" class="tableBackground" cellspacing="0" width="100%" border="0"><tr valign="top"><td width="30%" align="center"><form name="navigation" action="http://catalog.hcpl.net/ipac20/ipac.jsp" method="GET"><table class="tableBackground" cellpadding="0" cellspacing="10" width="85%" border="0"><tr><td><table class="tableBackgroundHighlight" cellpadding="4" cellspacing="0" width="100%" border="0" bgcolor="#EEEECC"><tr><td bgcolor="#008080" align="center"><a class="boldWhiteFont2" title="Item Information">Item Information</a></td></tr><tr><td><table class="tableBackgroundHighlight" cellpadding="0" cellspacing="0" width="100%" border="0" bgcolor="#EEEECC"><tr bgcolor="white"><td>&nbsp;</td><td><img src="http://catalog.hcpl.net/hipres/images/right-arrow-black.gif" border="0" alt="Holdings"></td><td><a class="tableBodyHighlightText" title="Holdings">Holdings</a></td></tr><tr></tr><tr></tr><tr></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><a class="smallAnchor" title="Summary" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uri=full%3D3100001%7E%211170144%7E%210&amp;ri=1&amp;term=1430219483&amp;index=ISBNEXH&amp;uindex=&amp;aspect=subtab14&amp;menu=search&amp;ri=1&amp;view=SUMMARY&amp;aspect=subtab14&amp;menu=search&amp;source=~!library&amp;enhancedcontentdata=true%0A%09%09">Summary</a></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><a class="smallAnchor" title="More Content" target="_blank" href="http://www.syndetics.com/index.aspx?type=rn12&amp;client=harrisp&amp;upc=&amp;oclc=&amp;isbn=9781430219484/INDEX.HTML&amp;close=yes">More Content</a></td></tr><tr><td colspan="3">&nbsp;<hr color="#008080" size="1" width="80%"></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td colspan="2"><a class="tableBodyBoldText" title="More by this author">More by this author</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td valign="top"><a class="smallAnchor" title="Seibel, Peter" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uindex=AH&amp;term=Seibel,%20Peter&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">Seibel, Peter</a></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td colspan="2"><a class="tableBodyBoldText" title="Subjects">Subjects</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td valign="top"><a class="smallAnchor" title="Computer programmers -- Interviews." href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uindex=SH&amp;term=Computer%20programmers%20--%20Interviews.&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">Computer programmers -- Interviews.</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td valign="top"><a class="smallAnchor" title="Computer programming" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uindex=SH&amp;term=Computer%20programming&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">Computer programming</a></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td colspan="2"><a class="tableBodyBoldText" title="Browse Catalog">Browse Catalog</a></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><a class="normalBlackFont0">by author:</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td valign="top"><a class="smallAnchor" title="Seibel, Peter" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uindex=AL&amp;term=Seibel,%20Peter&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">&nbsp;Seibel, Peter</a></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td>&nbsp;</td><td><a class="normalBlackFont0">by title:</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td valign="top"><a class="smallAnchor" title="Coders at work : reflections on the craft of programming / Peter Seibel." href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uindex=TL&amp;term=Coders%20at%20work%20:%20reflections%20on%20the%20craft%20of%20programming%20/&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">&nbsp;Coders at work : ref...
+		</a></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td colspan="2"><a class="tableBodyBoldText" title="Search Bookstores">Search Bookstores</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td colspan="2"><a href="javascript:openWindow('http://www.amazon.com/exec/obidos/ASIN/9781430219484');" class="smallAnchor">Amazon</a></td></tr><tr><td>&nbsp;</td><td valign="top"><li>&nbsp;</li></td><td colspan="2"><a href="javascript:openWindow('http://search.barnesandnoble.com/bookSearch/isbnInquiry.asp?ISBN=9781430219484');" class="smallAnchor">Barnes and Noble</a></td></tr><tr><td colspan="3">&nbsp;</td></tr><tr><td>&nbsp;</td><td colspan="2"><a class="smallAnchor" title="MARC Display" href="javascript:buildNewList('http%3A%2F%2Fcatalog.hcpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D1C667UJ250162.112733%26profile%3Dwebcat%26uri%3Dfull%253D3100001%257E%25211170144%257E%25210%26fullmarc%3Dtrue%26aspect%3Dsubtab14%26menu%3Dsearch%26source%3D%7E%21library%26view%3Ditems%26ri%3D1%26staffonly%3D%26term%3D1430219483%26index%3DISBNEXH%26uindex%3D%26aspect%3Dsubtab14%26menu%3Dsearch%26ri%3D1','http%3A%2F%2Fcatalog.hcpl.net%2Fipac20%2Fipac.jsp%3Fsession%3D1C667UJ250162.112733%26profile%3Dwebcat%26uri%3Dfull%253D3100001%257E%25211170144%257E%25210%26fullmarc%3Dtrue%26aspect%3Dsubtab14%26menu%3Dsearch%26source%3D%7E%21library%26view%3Ditems%26ri%3D1%26staffonly%3D%26term%3D1430219483%26index%3DISBNEXH%26uindex%3D%26aspect%3Dsubtab14%26menu%3Dsearch%26ri%3D1','false')">MARC Display</a></td></tr></table></td></tr></table></td></tr></table></form></td><td width="70%" colspan="2"><form name="full" action="http://catalog.hcpl.net/ipac20/ipac.jsp" method="GET"><table class="tableBackground" border="0" width="100%"><tr><td width="100%" colspan="3"><a class="largeAnchor" title="Coders at work : reflections on the craft of programming / Peter Seibel." href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uri=search=TL~!Coders%20at%20work%20:%20reflections%20on%20the%20craft%20of%20programming%20/&amp;term=Coders%20at%20work%20:%20reflections%20on%20the%20craft%20of%20programming%20/%20Peter%20Seibel.&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">Coders at work : reflections on the craft of programming / Peter Seibel.</a></td></tr><tr><td colspan="2"><a class="normalBlackFont1">by <a class="smallAnchor" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uri=search=AL~!Seibel,%20Peter&amp;term=Seibel,%20Peter&amp;ri=1&amp;aspect=subtab14&amp;menu=search&amp;source=~!library">Seibel, Peter</a></a></td></tr><tr><td valign="top" width="90" bgcolor="#FFFFFF"><A href="javascript:viewlargeimage('9781430219484')"><img src="http://www.syndetics.com/index.aspx?type=xw12&amp;isbn=9781430219484/SC.GIF&amp;client=harrisp&amp;upc=&amp;oclc=" border="0" alt="View full image"></A></td><td width="100%"><table class="tableBackground" border="0" width="100%"><tr><td width="100%" colspan="2"><a class="normalBlackFont1">[New York] : Apress, c2009. c2009.</a></td></tr><tr><td><a class="boldBlackFont1" title="Subjects">Subjects</a></td><td><a class="smallAnchor" title="Computer programmers -- Interviews." href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uri=search=SL~!Computer%20programmers%20--%20Interviews.&amp;term=Computer%20programmers%20--%20Interviews.&amp;aspect=subtab14&amp;menu=search&amp;source=~!library"><li>Computer programmers -- Interviews.</li></a></td></tr><tr><td>&nbsp;</td><td><a class="smallAnchor" title="Computer programming" href="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;uri=search=SL~!Computer%20programming&amp;term=Computer%20programming&amp;aspect=subtab14&amp;menu=search&amp;source=~!library"><li>Computer programming</li></a></td></tr><tr><td width="1%" nowrap="true" valign="top"><a class="normalBlackFont1">ISBN:&nbsp;</a></td><td valign="top" width="99%"><table class="tableBackground" cellpadding="0" cellspacing="0"><tr><td valign="top"><a class="normalBlackFont1">9781430219484 (pbk.)</a></td></tr><tr><td valign="top"><a class="normalBlackFont1"><font style="background-color: #FFFF80">1430219483</font> (pbk.)</a></td></tr></table></td></tr><tr><td width="1%" nowrap="true" valign="top"><a class="normalBlackFont1">Description:&nbsp;</a></td><td valign="top" width="99%"><table class="tableBackground" cellpadding="0" cellspacing="0"><tr><td valign="top"><a class="normalBlackFont1">xiii, 617 p. ; 23 cm.</a></td></tr></table></td></tr><tr><td width="1%" nowrap="true" valign="top"><a class="normalBlackFont1">Contents:&nbsp;</a></td><td valign="top" width="99%"><table class="tableBackground" cellpadding="0" cellspacing="0"><tr><td valign="top"><a class="normalBlackFont1">Jamie Zawinski -- Brad Fitzpatrick -- Douglas Crockford -- Brendan Eich -- Joshua Bloch -- Joe Armstrong -- Simon Peyton Jones -- Peter Norvig -- Guy Steele -- Dan Ingalls -- L. Peter Deutsch -- Ken Thompson -- Fran Allen -- Bernie Cosell -- Donald Knuth.</a></td></tr></table></td></tr><tr><td width="1%" nowrap="true" valign="top"><a class="normalBlackFont1">Notes:&nbsp;</a></td><td valign="top" width="99%"><table class="tableBackground" cellpadding="0" cellspacing="0"><tr><td valign="top"><a class="normalBlackFont1">"Interviews with some of the top programmers of our times"--Cover.</a></td></tr></table></td></tr><tr><td width="1%" nowrap="true" valign="top"><a class="normalBlackFont1">Requests:&nbsp;</a></td><td valign="top" width="99%"><table class="tableBackground" cellpadding="0" cellspacing="0"><tr><td valign="top"><a class="normalBlackFont1">1</a></td></tr></table></td></tr><tr><td colspan="3" align="right" nowrap="true">&nbsp;<input type="button" name="request" onClick="javascript:requestcopy('1170144', 'link=direct');" class="button" value="Request Item" alt="Request Item"></td></tr></table></td></tr></table></form><form name="details" action="http://catalog.hcpl.net/ipac20/ipac.jsp" method="GET"><table class="tableBackground" cellpadding="4" cellspacing="0" border="0" width="100%"><tr height="20"><td bgcolor="#008080" colspan="3" align="center"><a class="boldWhiteFont2">Copy/Holding information</a></td></tr><tr><td><table class="tableBackground" cellpadding="1" cellspacing="0" width="100%" border="0"><tr><td bgcolor="#EEEECC"><table class="tableBackground" cellpadding="3" cellspacing="0" width="100%" border="0"><tr height="20"><td bgcolor="#EEEECC"><a class="boldBlackFont1" title="Location">Location</a></td><td bgcolor="#EEEECC"><a class="boldBlackFont1" title="Collection">Collection</a></td><td bgcolor="#EEEECC"><a class="boldBlackFont1" title="Call No.">Call No.</a></td><td bgcolor="#EEEECC"><a class="boldBlackFont1" title="Status">Status</a></td><td bgcolor="#EEEECC"><a class="boldBlackFont1" title="Due Date">Due Date</a></td><td bgcolor="#EEEECC">&nbsp;</td></tr><tr height="15"><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Cy-Fair Library</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Nonfiction</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">005.1 Sei</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">Checked out</a></td><td bgcolor="white"><a class="normalBlackFont1" title="Item Information">03/06/2010</a></td><td nowrap="true" bgcolor="white" width="1%"></td></tr></table></td></tr></table><right><table class="tableBackground" cellspacing="0" border="0" cellpadding="3" width="100%"><tr align="right"><td align="left"></td><!--
+****************************************************
+Adds the return to source list link used in deduping
+****************************************************
+--><td nowrap="true" valign="bottom" align="left" width="100%"></td><!--
+****************************************************
+Build page numbers
+****************************************************
+--></tr></table></right></td></tr></table></form><br><form name="email_full" action="http://catalog.hcpl.net/ipac20/ipac.jsp" method="GET"><table class="tableBackground" border="0" align="center" cellpadding="2"><tr><td align="right"><a class="boldBlackFont1">Format:</a></td><td><input class="boldBlackFont1" type="radio" name="booklistformat" value="html" checked="true"><a class="normalBlackFont1">HTML</a><input class="boldBlackFont1" type="radio" name="booklistformat" value="plain"><a class="normalBlackFont1">Plain text</a><input class="boldBlackFont1" type="radio" name="booklistformat" value="delimited"><a class="normalBlackFont1">Delimited</a></td></tr><tr><td align="right"><a class="boldBlackFont1">Subject:</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="subject" maxlength="40" value="Coders at work : reflections on the craft of programming / Peter Seibel."></td><td>&nbsp;</td></tr><tr><td align="right"><a class="boldBlackFont1">Email to:</a></td><td align="left"><input class="textInputBox" type="text" size="40" name="emailaddress" maxlength="100" value=""></td><td align="left"><input type="button" name="bla_send_full_bib" value="Send" class="button" onClick="javascript:sendFullBib();"></td></tr></table></form></td></tr></table><br xmlns:netlib="/com.dynix.util.ulURLAPI" xmlns:stringex="/com.dynix.util.StringEx" xmlns:termhighlight="/com.dynix.util.TermHighlight" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" xmlns:URLDecoder="/java.net.URLDecoder"><script xmlns:netlib="/com.dynix.util.ulURLAPI" xmlns:stringex="/com.dynix.util.StringEx" xmlns:termhighlight="/com.dynix.util.TermHighlight" xmlns:URLEncoder="/com.dynix.util.IpacURLEncoder" xmlns:URLDecoder="/java.net.URLDecoder" language="javascript">
+ <!--
+setReturnFlag=0;
+var da = (document.all) ? 1 : 0;
+var pr = (window.print) ? 1 : 0;
+var mac = (navigator.userAgent.indexOf("Mac") != -1);
+var bookbagsize = 0;
+function printPage()
+{
+	if (pr)
+	{
+		// NS4, IE5
+		window.print();
+	}
+	else if (da && !mac)
+	{
+		// IE4 (Windows)
+		vbPrintPage();
+	}
+	else
+	{
+		// other browsers
+		alert("Sorry, your browser doesn't support this feature. Please press Control-P on a PC or Command-P on a Mac to print this page.");
+	}
+}
+if (da && !pr && !mac) with (document)
+{
+	writeln('<OBJECT ID="WB" WIDTH="0" HEIGHT="0" CLASSID="clsid:8856F961-340A-11D0-A96B-00C04FD705A2"></OBJECT>');
+	writeln('<' + 'SCRIPT LANGUAGE="VBScript">');
+	writeln('Sub window_onunload');
+	writeln('  On Error Resume Next');
+	writeln('  Set WB = nothing');
+	writeln('End Sub');
+	writeln('Sub vbPrintPage');
+	writeln('  OLECMDID_PRINT = 6');
+	writeln('  OLECMDEXECOPT_DONTPROMPTUSER = 2');
+	writeln('  OLECMDEXECOPT_PROMPTUSER = 1');
+	writeln('  On Error Resume Next');
+	writeln('  WB.ExecWB OLECMDID_PRINT, OLECMDEXECOPT_DONTPROMPTUSER');
+	writeln('End Sub');
+	writeln('<' + '/SCRIPT>');
+}
+function viewlargeimage(key)
+{
+	
+	window.open("http://www.syndetics.com/index.aspx?type=xw12&isbn=9781430219484/LC.GIF&client=harrisp&upc=&oclc=","popup","width=360,height=450,resize=yes,scrollbars=yes,dependent=yes,alwaysRaised=yes");
+}
+function nl(bookid)
+{
+  var newid="";
+  for(var i=0;i < bookid.length;++i)
+  {
+    var c=bookid.charAt(i)
+    if(c!=" ") { newid += c; }
+  }
+  src="http://catalog.hcpl.net/ipac20/ipac.jsp/cgi-bin/nl.exe?bookid="+newid;
+  popupWin = window.open(src, "nl", "WIDTH=480,HEIGHT=240,channelmode=0,dependent=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
+}
+var booklist = new Array("");
+
+ if(myarr == null)
+       {
+          count = 0;
+           myarr = new Array('1');
+    for(x = 0;x < myarr.length;x++)
+    {
+        myarr[x] = null;
+    }
+
+           if(1 > 0)
+            {
+
+             bkey='bkey'+1170144;
+             
+
+                 if(false == true)
+                 {
+                    myarr[count]=bkey+'ikey'+'7541922';
+                    count++;
+                 }
+
+
+
+
+              
+
+            }
+
+    if(false == true)
+    {
+      myarr[count] = 'bkey'+1170144;
+      count++;
+    }
+
+  }
+
+
+function searchinternet(query)
+{
+	window.open("http://www.google.com/search?q=" + query,"popup","resize=yes,scrollbars=yes,dependent=yes,alwaysRaised=yes");
+}
+function AddCopy(bkey,ikey,pos)
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var i = 0;
+    var found = false;
+
+    keyToSearch = bkey+ikey;
+
+
+
+    var indexfound = 0;
+
+    if(myarr.length > 0)
+    {
+       for(i = 0; i <myarr.length; i++)
+       {
+
+            s = myarr[i];
+            if(s != null)
+            {
+                keyToSearch = bkey+ikey;
+                if(s.indexOf(keyToSearch) != -1)
+                 {
+                      found = true;
+                      indexfound = i;
+                      break;
+                 }
+
+            }
+       }
+
+    }
+
+
+
+
+
+    if(found == false )
+    {
+
+        if (bookbagsize <  100)
+        {
+
+            myarr[count] = keyToSearch;
+
+            count ++;
+            now = new Date();
+
+            myImage = new Image();
+
+
+            myImage.src = 'http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&addbl=' + keyToSearch + '&time=' + now.getTime() + '&visible=false'+'&error=false';
+            bookbagsize++;
+            changeBookbagText('My List - ' + bookbagsize);
+            changeRequestLink('Remove Copy from MyList',pos);
+        }
+
+
+    }
+    else
+    {
+
+
+
+        if(found == true)
+        {
+            myarr[indexfound] = null;
+
+        }
+
+         now = new Date();
+         myImage = new Image();
+
+    myImage.src = 'http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&removebl=' + keyToSearch + '&time=' + now.getTime() + '&visible=false'+'&error=false';
+
+
+        bookbagsize--;
+        changeBookbagText('My List - ' + bookbagsize);
+        changeRequestLink('Add Copy to MyList',pos);
+
+
+    }
+
+
+
+
+
+
+   if (bookbagsize >=  100)
+   {
+
+        url = window.location.toString();
+
+        if(url.indexOf("#focus") != -1)
+        {
+            index = url.indexOf("#focus");
+            url = url.substring(0,index);
+
+        }
+        if(myarr != null)
+        {
+                i = 0;
+
+                for(i = 0; i <count;i++)
+                {
+                    if(myarr[i] != null)
+                        url+='&addkeys=' + myarr[i];
+                }
+        }
+
+        url += '&maxmylist='+'100';
+
+        document.buildLink.action = unescape(url);
+        document.buildLink.submit();
+
+
+   }
+
+}
+
+function changeRequestLink(text,pos)
+    {
+
+      str = 'requestlink'+pos;
+
+        if (document.getElementById)
+        {
+
+
+            document.getElementById(str).innerHTML=text;
+
+        }
+        else if (document.layers)
+        {
+
+              document.anchors[str].text=text;
+        }
+        else
+        {
+
+
+            bookbag.innerHTML=text;
+        }
+}
+
+function updatebooklist(myObj)
+{
+	key = myObj.name;
+
+    var found = false;
+
+    keyToSearch = key;
+
+
+
+    var indexfound = 0;
+
+    if(myarr != null)
+    {
+
+      if(myarr.length > 0)
+      {
+            for(i = 0; i <myarr.length; i++)
+            {
+
+                s = myarr[i];
+                if(s != null)
+                {
+
+                    if(s.indexOf(keyToSearch) != -1)
+                    {
+                          found = true;
+                        indexfound = i;
+                        break;
+                    }
+
+                }
+            }
+       }
+
+    }
+
+
+
+
+	if (myObj.value == 'Add to my list')
+	{
+        if (bookbagsize <  100)
+        {
+
+            if(myarr == null)
+            {
+                 myarr = new Array(1);
+
+            }
+            myarr[count] = key;
+            count++;
+
+		    now = new Date();
+
+		    myImage = new Image();
+		    myImage.src = 'http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&addbl=' + key + '&time=' + now.getTime() + '&visible=false'+'&error=false';
+		    document.images[key].src=myImage.src;
+		    myImage = new Image();
+		    myImage.src = '/hipres/images/spacer.gif';
+		    document.images[key].src=myImage.src;
+
+		    document.images[key].alt='Remove from my list';
+		    myObj.value='     Remove    ';
+		/* my comment */
+		    
+			    myObj.style.color='#FFFFFF';
+			    myObj.style.background='#3C7A49';
+			    myObj.style.border.left='2px solid #4AA65B';
+			    myObj.style.border.top='2px solid #4AA65B';
+			    myObj.style.border.right='2px solid #1B5927';
+			    myObj.style.border.bottom='2px solid #1B5927';
+			    bookbagsize++;
+			    changeBookbagText('My List - ' + bookbagsize);
+		    
+        }
+
+        // now save the value in hidden element
+
+
+	}
+	else
+	{
+
+        if(found == true)
+        {
+
+                myarr[indexfound] = null;
+        }
+
+		now = new Date();
+		myImage = new Image();
+		myImage.src = 'http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&removebl=' + key + '&time=' + now.getTime() + '&visible=false'+'&error=false';
+		document.images[key].src=myImage.src;
+		myImage = new Image();
+		myImage.src = '/hipres/images/spacer.gif';
+		document.images[key].src=myImage.src;
+		document.images[key].alt='-';
+		myObj.value='Add to my list';
+		
+			myObj.style.color='#000066';
+			myObj.style.background='#cccc99';
+			myObj.style.border.left='2px solid #aaaa77';
+			myObj.style.border.top='2px solid #aaaa77';
+			myObj.style.border.right='2px solid #003366';
+			myObj.style.border.bottom='2px solid #003366';
+			bookbagsize--;
+			changeBookbagText("My List - " + bookbagsize);
+		
+
+	}
+
+	if (bookbagsize >=  100)
+	{
+        url = window.location.toString();
+
+        if(url.indexOf("#focus") != -1)
+        {
+            index = url.indexOf("#focus");
+            url = url.substring(0,index);
+
+        }
+        if(myarr != null)
+        {
+                i = 0;
+
+                for(i = 0; i <count;i++)
+                {
+                    if(myarr[i] != null)
+                        url+='&addkeys=' + myarr[i];
+                }
+
+        }
+
+        url += '&maxmylist='+'100';
+
+        document.buildLink.action = unescape(url);
+        document.buildLink.submit();
+
+
+	}
+
+}
+function bklist(key)
+{
+	/* Do nothing here! */
+}
+function requestcopy(key, uri)
+{
+    now = new Date();
+	source = '~!library';
+	location = 'http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&bibkey=' + key + '&aspect=subtab14&lang=eng&menu=request&submenu=none&source=' + source + '&uri=' + uri + '&time=' + now.getTime();
+}
+
+function requestILL(illurl)
+{
+	source = '~!library';
+	location = illurl;
+}
+
+function sendFullBib()
+{
+	if(window.encodeURI)
+	{
+		subject = encodeURI(document.email_full.subject.value);
+	}
+	else
+	{
+   		subject = escape(document.email_full.subject.value);
+	}
+	emailaddress = document.email_full.emailaddress.value;
+	format = "html";
+	for (i = 0; i < document.email_full.booklistformat.length; i++)
+	{
+	    if (document.email_full.booklistformat[i].checked)
+	    {
+		   format = document.email_full.booklistformat[i].value;
+		   break;
+	    }
+	}
+	postmaster = "Harris County Public Library";
+	postmaster = encodeURI(postmaster);
+	
+			fullmarc = "false";
+		
+	location = "http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&uri=full%3D3100001%7E%211170144%7E%210&booklistformat=" + format + "&ri=1&bla_send_full_bib=true&aspect=subtab14&menu=search&view=items&page=0&group=0&term=1430219483&index=ISBNEXH&uindex=&aspect=subtab14&menu=search&ri=1&postmaster=" + postmaster + "&subject=" + subject + "&emailaddress=" + emailaddress + "&fullmarc=" + fullmarc;
+}
+function sendFullBibRR()
+{
+
+	subject = document.rr_full.subject.value;
+	label1 = "";
+	label2 = "";
+	label3 = "";
+	data1 = "";
+	data2 = "";
+	data3 = "";
+
+	if(document.rr_full.label1)
+	{
+	    label1 = encodeURI(document.rr_full.label1.value);
+	}
+	if(document.rr_full.label2)
+	{
+	    label2 = encodeURI(document.rr_full.label2.value);
+	}
+	if(document.rr_full.label3)
+	{
+	    label3 = encodeURI(document.rr_full.label3.value);
+	}
+
+	if(document.rr_full.rr_data1)
+	{
+	    data1 = encodeURI(document.rr_full.rr_data1.value);
+	}
+	if(document.rr_full.rr_data2)
+	{
+	    data2 = encodeURI(document.rr_full.rr_data2.value);
+	}
+	if(document.rr_full.rr_data3)
+	{
+	    data3 = encodeURI(document.rr_full.rr_data3.value);
+	}
+
+	emailaddress_rr = "";
+	postmaster = "Harris County Public Library";
+	postmaster = encodeURI(postmaster);
+	
+			fullmarc = "false";
+		
+	location = "http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&uri=full%3D3100001%7E%211170144%7E%210&booklistformat=html&ri=1&bla_send_full_bib_rr=true&aspect=subtab14&menu=search&view=items&page=0&group=0&term=1430219483&index=ISBNEXH&uindex=&aspect=subtab14&menu=search&ri=1&postmaster=" + postmaster + "&subject=" + subject + "&emailaddress=" + emailaddress_rr + "&fullmarc=" + fullmarc + "&rr_label1=" + label1 + "&rr_label2=" + label2 + "&rr_label3=" + label3 + "&rr_data1=" + data1 + "&rr_data2=" + data2 + "&rr_data3=" + data3;
+
+}
+function analytic_link()
+{
+	link = encodeURI(document.full.analytic);
+	if(link != null)
+	{
+	    index = link.selectedIndex;
+	    if (index != null && index >= 0)
+	    {
+		    destination = link.options[index].value;
+		    if (destination)
+		    {
+			    location = "http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&profile=webcat&ri=1&aspect=subtab14&menu=search&source=~!library&uri=" + destination;
+		    }
+	    }
+	    else
+	    {
+		    alert("Please select an analytic first");
+	    }
+	}
+}
+function hook_link()
+{
+	link = document.full.hook;
+	if(link!=null)
+	{
+	    index = link.selectedIndex;
+
+	    if (index != null && index >= 0)
+	    {
+		    destination = link.options[index].value;
+		    if (destination)
+		    {
+			    location = destination
+		    }
+	    }
+	    else
+	    {
+		    alert("Please select a library first");
+	    }
+	}
+}
+function openWindow(URL)
+{
+    window.open(URL, "ExternalLink", "");
+}
+//-->
+</script><center><table class="tableBackground" valign="bottom" width="100%"><tr><td align="center"><a class="normalBlackFont1">Email suggestions to the following address: &nbsp;<a class="normalBlackFont1" href="mailto:ipac@hcpl.net"><i>ipac@hcpl.net</i></a><a class="normalBlackFont1">&nbsp;.</a></a></td></tr><tr><td align="center">&nbsp;</td></tr><br></table></center><form name="buildLink" action="http://catalog.hcpl.net/ipac20/ipac.jsp?session=1C667UJ250162.112733&amp;profile=webcat&amp;menu=mylist&amp;listkey=ipac_my_list" method="post"><input type="hidden" name="returnURL" value=""></form></body><!-- See Microsoft article Q222064 for reason why there are two head tags --><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <META HTTP-EQUIV="Expires" CONTENT="0"><title>Harris County Public Library Online Catalog</title><link title="bannerstyles" href="/hipres/css/ipac.css" type="text/css" rel="stylesheet"></head></html>
