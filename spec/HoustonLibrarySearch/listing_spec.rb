@@ -1,10 +1,9 @@
 require 'spec/spec_helper'
-include HoustonLibrarySearch
 
-describe Listing do
+describe HoustonLibrarySearch::Listing do
 
   before(:each) do
-    @listing = Listing.new("location", "call number", "status", "due date")
+    @listing = HoustonLibrarySearch::Listing.new("location", "call number", "status", "due date")
   end
 
   it "should have a status" do

@@ -14,7 +14,7 @@ class HPL
         due = status[4, 8]
         status = "Checked out"
       end
-      Listing.new(row[0].text.strip, row[2].text.strip, status.capitalize, due)
+      HoustonLibrarySearch::Listing.new(row[0].text.strip, row[2].text.strip, status.capitalize, due)
     end
   end
 
