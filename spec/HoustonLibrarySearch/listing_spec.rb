@@ -1,4 +1,5 @@
 require 'spec/spec_helper'
+include HoustonLibrarySearch
 
 describe Listing do
 

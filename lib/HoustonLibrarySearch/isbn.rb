@@ -13,7 +13,7 @@ module HoustonLibrarySearch
         end
         multi.add(c)
       end
-  
+
       multi.perform do
         #TODO Include a timeout
       end
