@@ -14,7 +14,9 @@ class HCPL
       if(trs[0].css("td")[0].css("a").text =~ /Location/)
         trs[1, trs.length-1].collect do |tr|
           tds = tr.css("td")
-          HoustonLibrarySearch::Listing.new(tds[0].text, tds[2].text, tds[3].text, tds[4].text)
+          due_date = ''
+          due_date = tds[4].text if tds[4]
+          HoustonLibrarySearch::Listing.new(tds[0].text, tds[2].text, tds[3].text, due_date)
         end
       end
     end

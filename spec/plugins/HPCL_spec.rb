@@ -16,4 +16,12 @@ describe HCPL do
   it "should have a name" do
     HCPL.name.should == "Harris County Public Library"
   end
+
+  it "should parse a book with status 'On Order'" do
+    listing = HCPL.parse(load_fixture("HCPL-order"))[0]
+    listing.location.should  == "HCPL Aldine"
+    listing.call_number.should == "On Order"
+    listing.status.should ==  ""
+    listing.due_date.should ==  ""
+  end
 end
