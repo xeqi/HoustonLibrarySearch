@@ -6,7 +6,12 @@ module HoustonLibrarySearch
       @location = location
       @call_number = call_number
       @status = status
-      @due_date = due_date
+      @due_date = normalize(due_date)
+    end
+
+    private
+    def normalize(location)
+      location.gsub(/-/,'/')
     end
   end
 end

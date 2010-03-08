@@ -3,15 +3,15 @@ require 'spec/spec_helper'
 describe HoustonLibrarySearch::Listing do
 
   before(:each) do
-    @listing = HoustonLibrarySearch::Listing.new("location", "call number", "status", "due date")
+    @listing = HoustonLibrarySearch::Listing.new("location", "call number", "status", "10-9-09")
   end
 
   it "should have a status" do
     @listing.status.should == "status"
   end
 
-  it "should have a due date" do
-    @listing.due_date.should == "due date"
+  it "should normalize due date" do
+    @listing.due_date.should == "10/9/09"
   end
 
   it "should have a location" do
