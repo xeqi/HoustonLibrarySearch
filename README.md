@@ -4,7 +4,7 @@ Search Houston area libraries for books.
 
 ## Install
 
-gem install HoustonLibrarySearch
+    gem install HoustonLibrarySearch
 
 ## Usage
 
@@ -17,5 +17,5 @@ gem install HoustonLibrarySearch
 
 ##Libraries supported
 
-Harris County Public Library
-Houston Public Library
+* Harris County Public Library
+* Houston Public Library
