@@ -8,12 +8,12 @@ gem install HoustonLibrarySearch
 
 ## Usage
 
-`parser = HoustonLibrarySearch::ISBN.new
-hash = parser.search(isbn)
-hash.each do |library_name listings|
-	puts library_name
-	listings.each {|l| puts "#{l.location} #{l.call_number} #{l.status} #{l.due_date}"}
-end`
+    parser = HoustonLibrarySearch::ISBN.new
+    hash = parser.search(isbn)
+    hash.each do |library_name listings|
+      puts library_name
+      listings.each {|l| puts "#{l.location} #{l.call_number} #{l.status} #{l.due_date}"}
+    end
 
 ##Libraries supported
 
